@@ -17,6 +17,7 @@ function run_query($dbconn, $query) {
 	}
 	$result = pg_query($dbconn, $query);
 	if ($result == False and $debug) {
+		alert("invalid credentials");
 		echo "Query failed<br>";
 	}
 	return $result;
@@ -88,19 +89,7 @@ function update_article($dbconn, $title, $content, $aid) {
 }
 
 function authenticate_user($dbconn, $username, $password) {
-	$query=
-		"SELECT
-		authors.id as id,
-		authors.username as username,
-		authors.password as password,
-		authors.role as role
-		FROM
-		authors
-		WHERE
-		username='".$_POST['username']."'
-		AND
-		password='".$_POST['password']."'
-		LIMIT 1";
+	$query = "SELECT * FROM authors WHERE username='".$_POST['username']."' AND password='".$_POST['password']."'";
 	return run_query($dbconn, $query);
 }	
 ?>

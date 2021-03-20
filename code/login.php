@@ -2,7 +2,10 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$result = authenticate_user($dbconn, $_POST['username'], $_POST['password']);
+
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	$result = authenticate_user($dbconn, $username, $password);
 	if (pg_num_rows($result) == 1) {
 		$_SESSION['username'] = $_POST['username'];
 		$_SESSION['authenticated'] = True;
