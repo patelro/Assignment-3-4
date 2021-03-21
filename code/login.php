@@ -1,7 +1,11 @@
 <?php include("templates/page_header.php");?>
 <?php
 
+<<<<<<< Updated upstream
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+=======
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && check()) {
+>>>>>>> Stashed changes
 	$result = authenticate_user($dbconn, $_POST['username'], $_POST['password']);
 	if (pg_num_rows($result) == 1) {
 		$_SESSION['username'] = $_POST['username'];
@@ -63,6 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus name='username'>
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" id="inputPassword" class="form-control" placeholder="Password" required name='password'>
+      <input type="hidden" name="csrf_token" value="<?php echo generate_token();?>" />
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     </form>
 <br>
