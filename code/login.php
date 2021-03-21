@@ -1,6 +1,7 @@
 <?php include("templates/page_header.php");?>
 <?php
 
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && check()) {
 	$result = authenticate_user($dbconn, $_POST['username'], $_POST['password']);
 	if (pg_num_rows($result) == 1) {
