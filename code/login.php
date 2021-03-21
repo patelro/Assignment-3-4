@@ -1,11 +1,7 @@
 <?php include("templates/page_header.php");?>
 <?php
 
-<<<<<<< Updated upstream
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-=======
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && check()) {
->>>>>>> Stashed changes
 	$result = authenticate_user($dbconn, $_POST['username'], $_POST['password']);
 	if (pg_num_rows($result) == 1) {
 		$_SESSION['username'] = $_POST['username'];
