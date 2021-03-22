@@ -1,0 +1,14 @@
+2021/03/22 01:08:34 [emerg] 1#1: cannot load certificate key "/cert/localhost.key": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/cert/localhost.key','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2021/03/22 01:10:10 [emerg] 1#1: cannot load certificate key "/cert/localhost.key": BIO_new_file() failed (SSL: error:02001002:system library:fopen:No such file or directory:fopen('/cert/localhost.key','r') error:2006D080:BIO routines:BIO_new_file:no such file)
+2021/03/22 01:16:13 [emerg] 1#1: cannot load certificate "/cert/localhost.crt": PEM_read_bio_X509_AUX() failed (SSL: error:0909006C:PEM routines:get_name:no start line:Expecting: TRUSTED CERTIFICATE)
+2021/03/22 01:16:28 [emerg] 1#1: cannot load certificate "/cert/localhost.crt": PEM_read_bio_X509_AUX() failed (SSL: error:0909006C:PEM routines:get_name:no start line:Expecting: TRUSTED CERTIFICATE)
+2021/03/22 01:16:42 [emerg] 1#1: cannot load certificate "/cert/localhost.crt": PEM_read_bio_X509_AUX() failed (SSL: error:0909006C:PEM routines:get_name:no start line:Expecting: TRUSTED CERTIFICATE)
+2021/03/22 01:23:23 [warn] 1#1: the "ssl" directive is deprecated, use the "listen ... ssl" directive instead in /etc/nginx/conf.d/site.conf:4
+2021/03/22 01:23:23 [emerg] 1#1: cannot load certificate "/cert/localhost.crt": PEM_read_bio_X509_AUX() failed (SSL: error:0909006C:PEM routines:get_name:no start line:Expecting: TRUSTED CERTIFICATE)
+2021/03/22 01:32:24 [warn] 1#1: the "ssl" directive is deprecated, use the "listen ... ssl" directive instead in /etc/nginx/conf.d/site.conf:4
+2021/03/22 01:32:24 [emerg] 1#1: cannot load certificate "/cert/localh.crt": PEM_read_bio_X509_AUX() failed (SSL: error:0909006C:PEM routines:get_name:no start line:Expecting: TRUSTED CERTIFICATE)
+2021/03/22 01:37:29 [warn] 1#1: the "ssl" directive is deprecated, use the "listen ... ssl" directive instead in /etc/nginx/conf.d/site.conf:4
+2021/03/22 01:37:29 [emerg] 1#1: cannot load certificate "/cert/localh.crt": PEM_read_bio_X509_AUX() failed (SSL: error:0909006C:PEM routines:get_name:no start line:Expecting: TRUSTED CERTIFICATE)
+2021/03/22 01:40:07 [warn] 1#1: the "ssl" directive is deprecated, use the "listen ... ssl" directive instead in /etc/nginx/conf.d/site.conf:4
+2021/03/22 01:40:07 [emerg] 1#1: cannot load certificate "/cert/localhost.crt": PEM_read_bio_X509_AUX() failed (SSL: error:0909006C:PEM routines:get_name:no start line:Expecting: TRUSTED CERTIFICATE)
+2021/03/22 01:41:20 [emerg] 1#1: cannot load certificate "/cert/localh.crt": PEM_read_bio_X509_AUX() failed (SSL: error:0909006C:PEM routines:get_name:no start line:Expecting: TRUSTED CERTIFICATE)
